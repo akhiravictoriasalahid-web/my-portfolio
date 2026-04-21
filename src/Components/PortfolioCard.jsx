@@ -2,9 +2,9 @@
 
 function PortfolioCard(props) {
     return (
-        <div style={{border: "1px solid gray", padding: "10px", margin: "10px"}}>
+        <div className="card">
             <h2>{props.name}</h2>
-            <img src={props.screenshots} width="300" />
+            <img src={props.screenshots} width="300" className="card-img" />
             <p><b>Tech: </b>{props.tech}</p>
 
             <h3>Description</h3>
@@ -34,7 +34,7 @@ function PortfolioCard(props) {
                 ))}
             </ul>
 
-            <a href={props.github}>View Repo</a>
+            <a href={props.github} className="repo-btn" target="_blank">View Repo</a>
         </div>
     );
 }

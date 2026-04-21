@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  background: linear-gradient(135deg, #e3f2fd, #f8fafc);
 }
 
 #root {
@@ -87,6 +88,7 @@ h2 {
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+  text-align: center;
   @media (max-width: 1024px) {
     font-size: 20px;
   }
@@ -108,4 +110,38 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px auto;
+  width: 70%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.card-img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.repo-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 10px;
+  background: #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.repo-btn:hover {
+  background: #4338ca;
+  transform: translate(-1px);
 }
