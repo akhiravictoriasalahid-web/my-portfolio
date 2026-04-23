@@ -1,11 +1,22 @@
+import { useState } from "react";
+
 import PortfolioCard from "../Components/PortfolioCard";
 import BhromaonWebsite from "../assets/Bhromaon-website.png";
 import AkhiraWebsite from "../assets/Akhira-website.png";
 import TypingGame from "../assets/Typing-game.png";
 
 function Portfolio() {
+  const [showProjects, setShowProjects] = useState(false);
+  
   return (
     <div>
+      <button onClick={() => setShowProjects(true)}>
+        Preview Projects
+      </button>
+
+      {showProjects && (
+
+      <>
       <h1>My Portfolio</h1>
 
       <PortfolioCard
@@ -113,6 +124,8 @@ function Portfolio() {
       github="https://github.com/akhiravictoriasalahid-web/javascript7"
       />
 
+      </>
+      )}
     </div>
     
   );
