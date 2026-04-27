@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import PopupWindow from "../Components/PopupWindow";
 import PortfolioCard from "../Components/PortfolioCard";
 import BhromaonWebsite from "../assets/Bhromaon-website.png";
 import AkhiraWebsite from "../assets/Akhira-website.png";
@@ -7,6 +8,7 @@ import TypingGame from "../assets/Typing-game.png";
 
 function Portfolio() {
   const [showProjects, setShowProjects] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
   
   return (
     <div>
@@ -18,7 +20,15 @@ function Portfolio() {
 
       <>
       <h1>My Portfolio</h1>
-
+      
+     <div onClick={() => setSelectedProject({
+      name: "Bhromaon Website",
+      screenshots: BhromaonWebsite,
+      tech: "HTML5, CSS3, SCSS, FlexBox",
+      description: "Test",
+      what: ["Test"],
+      github: "link"
+     })}> 
       <PortfolioCard
       name="Bhromaon Website"
       screenshots={BhromaonWebsite}
@@ -51,6 +61,7 @@ function Portfolio() {
 
       github="https://github.com/akhiravictoriasalahid-web/Bhromaon-website"
       />
+     </div> 
 
        <PortfolioCard
       name="Akhira Website"
@@ -125,6 +136,12 @@ function Portfolio() {
       />
 
       </>
+      )}
+      {selectedProject && (
+        <PopupWindow
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+          />
       )}
     </div>
     
