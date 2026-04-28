@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
     z-index: 9999;
 }
 
@@ -16,5 +17,13 @@
     padding: 20px;
     width: 80%;
     max-width: 800px;
+    max-height: 80vh;
     border-radius: 10px;
+    overflow-y: auto;
+}
+
+.popup img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
 }

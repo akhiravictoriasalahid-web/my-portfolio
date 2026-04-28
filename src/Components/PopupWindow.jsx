@@ -7,14 +7,27 @@ function PopupWindow({project, onClose}) {
                 <h2>{project.name}</h2>
                 <img src={project.screenshots} width="300" />
 
-                <p><b>Tech: </b>{project.tech}</p>
+                <h3>What the Project Does</h3>
+                <ul>
+                    {project.what?.map((item, i) => (
+                        <li key={{i}}>{item}</li>
+                    ))}
+                </ul>
 
-                <h3>Description</h3>
-                <p>{project.description}</p>
+                <h3>What I Learned</h3>
+                <ul>
+                    {project.learned?.map((item, i) => (
+                        <li key={{i}}>{item}</li>
+                    ))}
+                </ul>
 
-                <a href={project.github} target="_blank">View Repo</a>
+                <h3>Challenges I Solved</h3>
+                <ul>
+                    {project.challenges?.map((item, i) => (
+                        <li key={{i}}>{item}</li>
+                    ))}
+                </ul>
 
-                <br />
                 <button onClick={onClose}>Close</button>
             </div>
         </div>

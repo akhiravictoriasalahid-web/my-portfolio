@@ -21,46 +21,43 @@ function Portfolio() {
       <>
       <h1>My Portfolio</h1>
       
-     <div onClick={() => setSelectedProject({
-      name: "Bhromaon Website",
-      screenshots: BhromaonWebsite,
-      tech: "HTML5, CSS3, SCSS, FlexBox",
-      description: "The BHROMAON Travel Website is a modern and responsive landing page designed for a travel agency. It showcases destinations, services, and customer testimonials through a visually appealing layout. The project focuses on clean UI design, strong typography, and responsive user experience.",
-      github: "https://github.com/akhiravictoriasalahid-web/Bhromaon-website"
-     })}> 
       <PortfolioCard
       name="Bhromaon Website"
       screenshots={BhromaonWebsite}
       tech="HTML5, CSS3, SCSS, FlexBox"
       description="The BHROMAON Travel Website is a modern and responsive landing page designed for a travel agency. It showcases destinations, services, and customer testimonials through a visually appealing layout. The project focuses on clean UI design, strong typography, and responsive user experience."
-      what={[
+
+      role="I independently designed and developed the entire website, including layout, styling, and responsiveness."
+
+      github="https://github.com/akhiravictoriasalahid-web/Bhromaon-website"
+      
+
+      onClick={() => setSelectedProject({
+      name: "Bhromaon Website",
+      screenshots: BhromaonWebsite,
+      what:[
         "Fully responsive design (desktop, tablet, mobile)",
         "Clean and modern UI",
         "Pixel-perfect conversion from Figma design",
         "Organized SCSS structure",
         "Smooth layout using Flexbox",
-      ]}
-
-      learned={[
+      ],
+      learned:[
         "Converting Figma design into real code",
         "Responsive design using media queries",
         "Layout techniques using Flexbox",
         "Structuring styles using SCSS",
-      ]}
-
-      role="I independently designed and developed the entire website, including layout, styling, and responsiveness."
-
-      challenges={[
+      ],
+      challenges:[
         "Responsive Layout: Adjusted sections like hero, steps, and testimonials for different screen sizes",
         "Background Image Handling: Ensured images scale properly without distortion",
         "Content Alignment: Used Flexbox to properly align text and images across sections",
         "UI Consistency: Maintained consistent colors, fonts, and spacing throughout the site",
         "SCSS Organization: Structured styles into multiple SCSS files for better maintainability"
-      ]}
-
-      github="https://github.com/akhiravictoriasalahid-web/Bhromaon-website"
+      ],
+     })}
       />
-     </div> 
+
 
        <PortfolioCard
       name="Akhira Website"
