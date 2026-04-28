@@ -25,9 +25,8 @@ function Portfolio() {
       name: "Bhromaon Website",
       screenshots: BhromaonWebsite,
       tech: "HTML5, CSS3, SCSS, FlexBox",
-      description: "Test",
-      what: ["Test"],
-      github: "link"
+      description: "The BHROMAON Travel Website is a modern and responsive landing page designed for a travel agency. It showcases destinations, services, and customer testimonials through a visually appealing layout. The project focuses on clean UI design, strong typography, and responsive user experience.",
+      github: "https://github.com/akhiravictoriasalahid-web/Bhromaon-website"
      })}> 
       <PortfolioCard
       name="Bhromaon Website"
