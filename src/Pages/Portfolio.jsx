@@ -12,6 +12,14 @@ function Portfolio() {
   
   return (
     <div>
+
+      <h1>My Portfolio</h1>
+
+      <p className="portfolio-desc">
+        I focus on building clean, responsive, and user-friendly websites. 
+        Below are some of my projects that showcase my skills in HTML, CSS, SCSS, and (Basic) JavaScript.
+      </p>
+
       <button onClick={() => setShowProjects(!showProjects)}>
         {showProjects ? "Hide Projects" : "Show Projects"}
       </button>
@@ -19,7 +27,6 @@ function Portfolio() {
       {showProjects && (
 
       <>
-      <h1>My Portfolio</h1>
       
       <PortfolioCard
       name="Bhromaon Website"

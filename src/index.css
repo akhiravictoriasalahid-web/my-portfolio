@@ -112,6 +112,14 @@ code {
   background: var(--code-bg);
 }
 
+/* === PORTFOLIO STYLE === */
+.portfolio-desc {
+  max-width: 600px;
+  margin: 10px auto 20px;
+  text-align: center;
+  color: #555;
+}
+
 .card {
   background: #ffffff;
   border: 1px solid #eee;
