@@ -9,6 +9,28 @@ import TypingGame from "../assets/Typing-game.png";
 function Portfolio() {
   const [showProjects, setShowProjects] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [search, setSearch] = useState("");
+
+  const projects = [
+    {
+      name:"Bhromaon Website",
+      screenshots: BhromaonWebsite,
+      tech:"HTML5, CSS3, SCSS, FlexBox",
+      description:"",
+    },
+    
+    {
+      name:"Akhira Website",
+      screenshots: AkhiraWebsite,
+      tech:"HTML, CSS, SCSS, JavaScript(Basic)",
+    },
+
+    {
+      name:"Typing Speed Game",
+      screenshots: TypingGame,
+      tech:"JavaScript (main functionality), HTML5 (pre-built), CSS3 (pre-built)",
+    },
+  ];
   
   return (
     <div>
@@ -24,11 +46,36 @@ function Portfolio() {
         {showProjects ? "Hide Projects" : "Show Projects"}
       </button>
 
+      <input 
+       type="text"
+       placeholder="Search project..." 
+       value={search}
+       onChange={(e) => setSearch(e.target.value)}
+      />
+
       {showProjects && (
 
       <>
       
-      <PortfolioCard
+      <div>
+        {projects.filter((proj) => proj.name.toLowerCase().includes(search.toLowerCase()))
+          .map((proj, index) => (
+            <PortfolioCard 
+              key={index}
+              name={proj.name}
+              screenshots={proj.screenshots}
+              tech={proj.tech}
+              description={proj.description}
+              role={proj.role}
+              github={proj.github}
+
+              onClick={() => setSelectedProject(proj)}
+            />
+      ))}
+      </div>
+
+
+{/*  <PortfolioCard
       name="Bhromaon Website"
       screenshots={BhromaonWebsite}
       tech="HTML5, CSS3, SCSS, FlexBox"
@@ -147,7 +194,7 @@ function Portfolio() {
       ],
       })}
       />
-
+*/}
       </>
       )}
       {selectedProject && (
