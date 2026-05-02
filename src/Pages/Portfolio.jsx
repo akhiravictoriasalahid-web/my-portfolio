@@ -16,79 +16,13 @@ function Portfolio() {
       name:"Bhromaon Website",
       screenshots: BhromaonWebsite,
       tech:"HTML5, CSS3, SCSS, FlexBox",
-      description:"",
-    },
-    
-    {
-      name:"Akhira Website",
-      screenshots: AkhiraWebsite,
-      tech:"HTML, CSS, SCSS, JavaScript(Basic)",
-    },
-
-    {
-      name:"Typing Speed Game",
-      screenshots: TypingGame,
-      tech:"JavaScript (main functionality), HTML5 (pre-built), CSS3 (pre-built)",
-    },
-  ];
-  
-  return (
-    <div>
-
-      <h1>My Portfolio</h1>
-
-      <p className="portfolio-desc">
-        I focus on building clean, responsive, and user-friendly websites. 
-        Below are some of my projects that showcase my skills in HTML, CSS, SCSS, and (Basic) JavaScript.
-      </p>
-
-      <button onClick={() => setShowProjects(!showProjects)}>
-        {showProjects ? "Hide Projects" : "Show Projects"}
-      </button>
-
-      <input 
-       type="text"
-       placeholder="Search project..." 
-       value={search}
-       onChange={(e) => setSearch(e.target.value)}
-      />
-
-      {showProjects && (
-
-      <>
+      description:"The BHROMAON Travel Website is a modern and responsive landing page designed for a travel agency. It showcases destinations, services, and customer testimonials through a visually appealing layout. The project focuses on clean UI design, strong typography, and responsive user experience.",
       
-      <div>
-        {projects.filter((proj) => proj.name.toLowerCase().includes(search.toLowerCase()))
-          .map((proj, index) => (
-            <PortfolioCard 
-              key={index}
-              name={proj.name}
-              screenshots={proj.screenshots}
-              tech={proj.tech}
-              description={proj.description}
-              role={proj.role}
-              github={proj.github}
-
-              onClick={() => setSelectedProject(proj)}
-            />
-      ))}
-      </div>
-
-
-{/*  <PortfolioCard
-      name="Bhromaon Website"
-      screenshots={BhromaonWebsite}
-      tech="HTML5, CSS3, SCSS, FlexBox"
-      description="The BHROMAON Travel Website is a modern and responsive landing page designed for a travel agency. It showcases destinations, services, and customer testimonials through a visually appealing layout. The project focuses on clean UI design, strong typography, and responsive user experience."
-
-      role="I independently designed and developed the entire website, including layout, styling, and responsiveness."
-
-      github="https://github.com/akhiravictoriasalahid-web/Bhromaon-website"
+      role:"I independently designed and developed the entire website, including layout, styling, and responsiveness.",
       
+      github:"https://github.com/akhiravictoriasalahid-web/Bhromaon-website",
 
-      onClick={() => setSelectedProject({
-      name: "Bhromaon Website",
-      screenshots: BhromaonWebsite,
+      
       what:[
         "Fully responsive design (desktop, tablet, mobile).",
         "Clean and modern UI.",
@@ -109,24 +43,18 @@ function Portfolio() {
         "UI Consistency: Maintained consistent colors, fonts, and spacing throughout the site.",
         "SCSS Organization: Structured styles into multiple SCSS files for better maintainability."
       ],
-      })}
-      />
+    },
 
-
-       <PortfolioCard
-      name="Akhira Website"
-      screenshots={AkhiraWebsite}
-      tech="HTML, CSS, JavaScript(Basic)"
-      description="This project is a personal portfolio website designed to showcase my skills, projects, and background as a front-end developer. The website features a clean and modern design with responsive layouts to ensure a smooth user experience across different devices."
-
-      role="I independently designed and developed the entire website, including layout, styling, and functionality."
-
-      github="https://github.com/akhiravictoriasalahid-web/my-website"
-      
-
-      onClick={() => setSelectedProject({
-      name: "Akhira Website",
+    {
+      name:"Akhira Website",
       screenshots: AkhiraWebsite,
+      tech:"HTML, CSS, SCSS, JavaScript(Basic)",
+      description:"This project is a personal portfolio website designed to showcase my skills, projects, and background as a front-end developer. The website features a clean and modern design with responsive layouts to ensure a smooth user experience across different devices.",
+      
+      role:"I independently designed and developed the entire website, including layout, styling, and functionality.",
+      
+      github:"https://github.com/akhiravictoriasalahid-web/my-website",
+
       what:[
         "Displays personal introduction.",
         "Shows information about me.",
@@ -149,23 +77,18 @@ function Portfolio() {
         "Layout Structuring: Managed alignment and spacing using Flexbox and Grid.",
         "Design Consistency: Maintained consistent colors, fonts, and spacing across all pages."
       ],
-      })}
-      />
+    },
 
-       <PortfolioCard
-      name="Typing Speed Game"
-      screenshots={TypingGame}
-      tech="JavaScript (main functionality), HTML5 (pre-built), CSS3 (pre-built)"
-      description="This project is a typing speed game where users type displayed words within a limited time. The game tracks the user’s score and adjusts difficulty levels dynamically. My contribution focused on implementing the game logic and interactivity using JavaScript."
-
-      role="I was responsible for developing the JavaScript functionality of the game, including the game logic, scoring system, timer, and difficulty settings. The HTML and CSS were provided, and I integrated my JavaScript code to make the game fully interactive."
-
-      github="https://github.com/akhiravictoriasalahid-web/javascript7"
-      
-      
-      onClick={() => setSelectedProject({
-      name: "Typing Speed Game",
+    {
+      name:"Typing Speed Game",
       screenshots: TypingGame,
+      tech:"JavaScript (main functionality), HTML5 (pre-built), CSS3 (pre-built)",
+      description:"This project is a typing speed game where users type displayed words within a limited time. The game tracks the user’s score and adjusts difficulty levels dynamically. My contribution focused on implementing the game logic and interactivity using JavaScript.",
+
+      role:"I was responsible for developing the JavaScript functionality of the game, including the game logic, scoring system, timer, and difficulty settings. The HTML and CSS were provided, and I integrated my JavaScript code to make the game fully interactive.",
+
+      github:"https://github.com/akhiravictoriasalahid-web/javascript7",
+
       what:[
         "Displays a random word for the user to type.",
         "Detects user input and checks if it matches the word.",
@@ -192,9 +115,53 @@ function Portfolio() {
         "Difficulty Scaling: Adjusted time increments based on selected difficulty.",
         "Game Over Handling: Displayed final score and restart option dynamically."
       ],
-      })}
+    },
+  ];
+  
+  return (
+    <div>
+
+      <h1>My Portfolio</h1>
+
+      <p className="portfolio-desc">
+        I focus on building clean, responsive, and user-friendly websites. 
+        Below are some of my projects that showcase my skills in HTML, CSS, SCSS, and (Basic) JavaScript.
+      </p>
+
+      <div className="controls">
+      <button onClick={() => setShowProjects(!showProjects)}>
+        {showProjects ? "Hide Projects" : "Show Projects"}
+      </button>
+
+      <input 
+       type="text"
+       placeholder="Search project..." 
+       value={search}
+       onChange={(e) => setSearch(e.target.value)}
       />
-*/}
+      </div>
+
+      {showProjects && (
+
+      <>
+      
+      <div>
+        {projects.filter((proj) => proj.name.toLowerCase().includes(search.toLowerCase()))
+          .map((proj, index) => (
+            <PortfolioCard 
+              key={index}
+              name={proj.name}
+              screenshots={proj.screenshots}
+              tech={proj.tech}
+              description={proj.description}
+              role={proj.role}
+              github={proj.github}
+
+              onClick={() => setSelectedProject(proj)}
+            />
+      ))}
+      </div>
+
       </>
       )}
       {selectedProject && (
