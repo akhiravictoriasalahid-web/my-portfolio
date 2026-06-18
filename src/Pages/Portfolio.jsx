@@ -121,7 +121,7 @@ function Portfolio() {
   return (
     <div>
 
-      <h1>My Portfolio</h1>
+      <h1 className="portfolio-title">My Portfolio</h1>
 
       <p className="portfolio-desc">
         I focus on building clean, responsive, and user-friendly websites. 
@@ -135,9 +135,11 @@ function Portfolio() {
 
       <input 
        type="text"
+       id="project-search"
        placeholder="Search project..." 
        value={search}
        onChange={(e) => setSearch(e.target.value)}
+       autoComplete="off"
       />
       </div>
 
