@@ -41,3 +41,29 @@ nav a {
 nav a:hover {
     color: #4f46e5;
 }
+
+/* === MEDIA QUERY === */
+@media (max-width: 480px) {
+    .navbar {
+        margin: 10px;
+        border-radius: 25px;
+    }
+    .nav-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    .logo {
+        font-size: 18px;
+    }
+}

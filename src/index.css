@@ -445,7 +445,59 @@ section {
 
 /* === MEDIA QUERY === */
 @media (max-width: 768px) {
+  main {
+    padding: 0 15px;
+  }
+  .section-card {
+    padding: 25px;
+  }
+  .hero-image img {
+    width: 220px;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons a {
+    width: 220px;
+    text-align: center;
+  }
+  #about {
+    flex-direction: column;
+    gap: 25px;
+  }
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .controls input {
+    width: 100%;
+    max-width: 300px;
+  }
+  .skills-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .hero-image img {
+    width: 180px;
+  }
+  .hero-content h1 {
+    font-size: 24px;
+  }
+  .card {
+    padding: 15px;
+  }
+  .card-img {
+    height: auto;
   }
 }
