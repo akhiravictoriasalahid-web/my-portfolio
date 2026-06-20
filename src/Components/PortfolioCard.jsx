@@ -4,7 +4,14 @@ function PortfolioCard(props) {
     return (
         <div className="card">
             <h2>{props.name}</h2>
-            <img src={props.screenshots} width="300" className="card-img" />
+            <img 
+            src={props.screenshots} 
+            alt={`${props.name} screenshot`} 
+            className="card-img"
+            loading="lazy"
+            width="600"
+            height="300"
+            />
             <p><b>Tech: </b>{props.tech}</p>
 
             <h3>Description</h3>
