@@ -7,7 +7,7 @@ import AkhiraWebsite from "../assets/Akhira-website.png";
 import TypingGame from "../assets/Typing-game.png";
 
 function Portfolio() {
-  const [showProjects, setShowProjects] = useState(false);
+  const [showProjects] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);
   const [search, setSearch] = useState("");
 
@@ -129,13 +129,11 @@ function Portfolio() {
       </p>
 
       <div className="controls">
-      <button onClick={() => setShowProjects(!showProjects)}>
-        {showProjects ? "Hide Projects" : "Show Projects"}
-      </button>
 
       <input 
        type="text"
        id="project-search"
+       name="project_search"
        placeholder="Search project..." 
        value={search}
        onChange={(e) => setSearch(e.target.value)}
@@ -147,7 +145,7 @@ function Portfolio() {
 
       <>
       
-      <div>
+      <div className="project-grid">
         {projects.filter((proj) => proj.name.toLowerCase().includes(search.toLowerCase()))
           .map((proj, index) => (
             <PortfolioCard 

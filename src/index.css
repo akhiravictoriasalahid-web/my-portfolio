@@ -127,20 +127,37 @@ code {
   text-align: center;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
 .card {
   background: #ffffff;
   border: 1px solid #eee;
   border-radius: 12px;
-  padding: 25px;
-  margin: 30px auto;
-  width: 70%;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: left;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.12);
 }
 
 .card-img {
   display: block;
-  margin: 20px auto;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin: 15px auto;
   border-radius: 8px;
 }
 
@@ -326,32 +343,57 @@ section {
 
 /* === SKILLS === */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 40px;
 }
 
-.skill-card {
-  background: #86efac;
-  border-radius: 15px;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,.08);
-  transition: .3s;
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.skill-card h3 {
+.skill-icon {
+  font-size: 45px;
+  transition: all .3s ease;
+}
+
+.skills-item:hover .skill-icon {
+  transform: translateY(-8px) scale(1.1);
+  color: #22c55e;
+}
+
+.skills-item h3 {
   font-size: 18px;
-  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
 }
 
-.skill-card p {
-  font-size: 16px;
+/* === SKILLS ICON OFFICIAL COLORS === */
+.html {
+  color: #e34f26;
 }
-
-.skill-card:hover {
-  transform: translateY(-5px);
+.css {
+  color: #1572B6;
+}
+.sass {
+  color:#CC6699;
+}
+.js {
+  color:#F7DF1E;
+}
+.react {
+  color:#61DAFB;
+}
+.git {
+  color:#F05032;
+}
+.github {
+  color:#181717;
 }
 
 /* === CONTACT SECTION === */
@@ -399,4 +441,11 @@ section {
 
 .contact-form .btn:hover {
   background: #2fb95f;
+}
+
+/* === MEDIA QUERY === */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }

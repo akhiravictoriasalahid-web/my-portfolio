@@ -2,7 +2,9 @@ import Portfolio from "./Pages/Portfolio.jsx";
 import Contact from "./Components/Contact.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import profileImage from "./assets/profileimage.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaHtml5, FaCss3Alt, FaSass, FaReact, FaGitAlt } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiSass } from "react-icons/si";
 
 function App() {
   return (
@@ -80,34 +82,39 @@ function App() {
 
         <div className="skills-grid">
 
-          <div className="skill-card">
+          <div className="skills-item">
+            <FaHtml5 className="skill-icon html" />
             <h3>HTML5</h3>
-            <p>95%</p>
           </div>
           
-          <div className="skill-card">
+          <div className="skills-item">
+            <FaCss3Alt className="skill-icon css" />
             <h3>CSS3</h3>
-            <p>90%</p>
           </div>
 
-          <div className="skill-card">
+          <div className="skills-item sass">
+            <FaSass className="skill-icon" />
             <h3>SCSS</h3>
-            <p>85%</p>
           </div>
 
-          <div className="skill-card">
+          <div className="skills-item">
+            <IoLogoJavascript className="skill-icon js" />
             <h3>JavaScript</h3>
-            <p>75%</p>
           </div>
 
-          <div className="skill-card">
+          <div className="skills-item">
+            <FaReact className="skill-icon react" />
             <h3>React</h3>
-            <p>75%</p>
           </div>
 
-          <div className="skill-card">
-            <h3>Git & GitHub</h3>
-            <p>85%</p>
+          <div className="skills-item">
+            <FaGitAlt className="skill-icon git" />
+            <h3>Git</h3>
+          </div>
+
+          <div className="skills-item">
+            <FaGithub className="skill-icon github" />
+            <h3>GitHub</h3>
           </div>
 
         </div>
