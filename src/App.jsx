@@ -15,7 +15,12 @@ function App() {
       <section id="home" className="hero section-card">
 
         <div className="hero-image">
-          <img src={profileImage} alt="Akhira" />
+          <img 
+          src={profileImage} 
+          alt="Junie Victoria Salahid" 
+          width="280"
+          height="280"
+          />
         </div>
 
         <div className="hero-content">
@@ -32,6 +37,7 @@ function App() {
               href="https://github.com/akhiravictoriasalahid-web"
               target="_blank"
               rel="noreferrer"
+              aria-label="GitHub profile"
               >
                 <FaGithub />
             </a>
@@ -40,6 +46,7 @@ function App() {
               href="https://www.linkedin.com/in/junie-victoria-salahid-776285177/?skipRedirect=true"
               target="_blank"
               rel="noreferrer"
+              aria-label="LinkedIn profile"
               >
                 <FaLinkedin />                
             </a>
