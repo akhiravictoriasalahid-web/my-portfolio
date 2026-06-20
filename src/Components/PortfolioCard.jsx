@@ -9,8 +9,6 @@ function PortfolioCard(props) {
             alt={`${props.name} screenshot`} 
             className="card-img"
             loading="lazy"
-            width="600"
-            height="300"
             />
             <p><b>Tech: </b>{props.tech}</p>
 

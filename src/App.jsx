@@ -18,8 +18,6 @@ function App() {
           <img 
           src={profileImage} 
           alt="Junie Victoria Salahid" 
-          width="280"
-          height="280"
           />
         </div>
 
