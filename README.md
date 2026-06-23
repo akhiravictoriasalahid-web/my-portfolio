@@ -1,16 +1,69 @@
-# React + Vite
+# 💼 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio website built with React.
+This website showcases my profile, skills, work experience, projects, and contact information.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Website:** https://junievictoria.com
 
-## React Compiler
+## 👩‍💻 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hi, I'm **Junie Victoria Salahid**, a Front-end Developer based in Hässleholm, Sweden.
 
-## Expanding the ESLint configuration
+I enjoy building responsive and user-friendly web interfaces while continuously improving my front-end development skills.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Responsive portfolio website
+- Hero section with profile image
+- About section
+- Skills section
+- Work experience section
+- Project portfolio cards
+- Project details popup
+- Project search feature
+- Contact form using EmailJS
+- GitHub and LinkedIn links
+
+## 🛠️ Technologies Used
+
+- React
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- Git
+- GitHub
+- EmailJS
+- React Icons
+- Netlify
+- Cloudflare
+
+## 📂 Featured Projects
+
+### 🌍 Bhromaon Website
+
+A responsive travel landing page created from a Figma design.
+
+### 💼 Personal Portfolio
+
+A portfolio website showcasing my skills, projects, and professional background.
+
+### ⌨️ Typing Speed Game
+
+A JavaScript typing game featuring a timer, scoring system, and multiple difficulty levels.
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/akhiravictoriasalahid-web/my-portfolio.git
+cd my-portfolio
+npm install
+npm run dev
+```
+
+## 📬 Contact
+
+- 🌐 Website: https://junievictoria.com
+- 💻 GitHub: https://github.com/akhiravictoriasalahid-web
+- 💼 LinkedIn: https://www.linkedin.com/in/junie-victoria-salahid-776285177
