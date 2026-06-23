@@ -19,7 +19,7 @@ function PortfolioCard(props) {
             <p>{props.role}</p>
             
             <div className="btn-group">
-              <a href={props.github} className="repo-btn" target="_blank">
+              <a href={props.github} className="repo-btn" target="_blank" rel="noopener noreferrer">
                   View Repo
               </a>
             
